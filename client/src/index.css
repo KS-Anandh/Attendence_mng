@@ -332,7 +332,16 @@ a{
     width:80%;
     height:300px;
     margin: 0px 10%;
-    border-radius: 20px;
+    border-radius:10px;
+  }
+  .home .about{
+    padding: 10px 10%;
+
+
+
+
+
+    
   }
   .home .app-btn{
     margin:30px 40%;
