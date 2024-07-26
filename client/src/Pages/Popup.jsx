@@ -5,7 +5,7 @@ const Popup = ({pop,setPop,setLogin}) => {
        const [loginId,setLoginId]=useState();
        const [loginPass,setLoginPass]=useState();
       const login=()=>{
-        axios.post("http://localhost:9600/login/verify",{loginId,loginPass})
+        axios.post("https://attendence-mng.vercel.app/login/verify",{loginId,loginPass})
          .then((res)=>{
           sessionStorage.setItem("token",(res.data.token));
           alert("Login Success")
@@ -16,7 +16,7 @@ const Popup = ({pop,setPop,setLogin}) => {
       } 
       const data=()=>{
         const token=sessionStorage.getItem("token")
-        axios.get('http://localhost:9600/login/info',{headers:{'x-token':token}})
+        axios.get('https://attendence-mng.vercel.app/login/info',{headers:{'x-token':token}})
         .then((res)=>{
   
           setLogin(res.data)

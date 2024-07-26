@@ -10,7 +10,7 @@ const Register = ({setPop}) => {
   const [studentName,setStudentName]=useState(null)
   const [studentRoom,setStudentRoom]=useState(null)
   const register=()=>{
-    axios.post("http://localhost:9600/student",{studentId,studentName,studentRoom},{headers:{'x-token':token}})
+    axios.post("https://attendence-mng.vercel.app/student",{studentId,studentName,studentRoom},{headers:{'x-token':token}})
     .then((res)=>{
       alert(res.data)
       navigate("/registers")

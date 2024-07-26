@@ -7,7 +7,7 @@ const Update = ({setPop}) => {
     const navigate=useNavigate();
     const [data,setData]=useState([]);
     useEffect(()=>{
-        axios.get(`http://localhost:9600/student/id/${id}`)
+        axios.get(`https://attendence-mng.vercel.app/student/id/${id}`)
         .then((res)=>{
             setData(res.data)
         })
@@ -18,7 +18,7 @@ const Update = ({setPop}) => {
   const [studentName,setStudentName]=useState()
   const [studentRoom,setStudentRoom]=useState()    
   const update=()=>{
-    axios.put(`http://localhost:9600/student/update/${id}`,{studentId,studentName,studentRoom},{headers:{'x-token':token}})
+    axios.put(`https://attendence-mng.vercel.app/student/update/${id}`,{studentId,studentName,studentRoom},{headers:{'x-token':token}})
     .then((res)=>{
         alert(res.data)
         navigate('/registers')

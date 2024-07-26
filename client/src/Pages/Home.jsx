@@ -6,7 +6,7 @@ import axios from 'axios'
 const Home = ({setPop,login}) => {
 
  const active=()=>{
-  axios.post("http://localhost:9600/attendence/active")
+  axios.post("https://attendence-mng.vercel.app/attendence/active")
   .then((res)=>{
     alert(res.data)
   })

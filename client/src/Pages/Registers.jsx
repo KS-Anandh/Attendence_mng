@@ -6,7 +6,7 @@ const Registers = () => {
     const [student,setStudents]=useState([])
     const token=sessionStorage.getItem('token')
     useEffect(()=>{
-        axios.get("http://localhost:9600/student",{headers:{'x-token':token}})
+        axios.get("https://attendence-mng.vercel.app/student",{headers:{'x-token':token}})
         .then((res)=>{
             setStudents(res.data)
         })
@@ -14,7 +14,7 @@ const Registers = () => {
     },[])
 const Delete=(id,name)=>{
    if(confirm(`Delete ${name}`)){
-    axios.delete(`http://localhost:9600/student/delete/${id}`,{headers:{'x-token':token}})
+    axios.delete(`https://attendence-mng.vercel.app/student/delete/${id}`,{headers:{'x-token':token}})
    .then((res)=>{  
     const updated=student.filter(item=>item._id!=id)
     setStudents(updated)

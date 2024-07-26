@@ -9,12 +9,12 @@ const List = () => {
 
   
   useEffect(() => {
-    axios.get(`http://localhost:9600/attendence/list/absent/${date}`)
+    axios.get(`https://attendence-mng.vercel.app/attendence/list/absent/${date}`)
       .then((res) => {
         setAList(res.data)
       })
       .catch((err) => { console.log(err) })
-      axios.get(`http://localhost:9600/attendence/list/${date}`)
+      axios.get(`https://attendence-mng.vercel.app/attendence/list/${date}`)
       .then((res) => {
         setPList(res.data)
 

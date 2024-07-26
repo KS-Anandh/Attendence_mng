@@ -7,7 +7,7 @@ const Attendence = ({setPop,login}) => {
     const [attend,setAttend]=useState([])
     const token=sessionStorage.getItem('token');
     useEffect(()=>{
-        axios.get("http://localhost:9600/student",{headers:{"x-token":token}})
+        axios.get("https://attendence-mng.vercel.app/student",{headers:{"x-token":token}})
         .then((res)=>{
             setStudents(res.data)
             console.log(login)
@@ -18,7 +18,7 @@ const Attendence = ({setPop,login}) => {
    const attendHandler=()=>{ 
     const inform=confirm(`Total Present is : '${attend.length}' \n Press "OK" to Submit or Press "Cancel" to Modify.`)
     if(inform){
-        axios.post("http://localhost:9600/attendence",{attend:attend},{headers:{"x-token":token}})
+        axios.post("https://attendence-mng.vercel.app/attendence",{attend:attend},{headers:{"x-token":token}})
         .then((res)=>{
          alert(res.data)
          })
