@@ -16,7 +16,7 @@ display: none;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-image: linear-gradient(180deg,rgb(85, 181, 245), rgb(18, 235, 137));
+  background-image: linear-gradient(90deg,rgb(85, 181, 245), rgb(18, 235, 137));
   column-gap:20px;
   padding: 10px 0px;
   background-color:lightyellow;
